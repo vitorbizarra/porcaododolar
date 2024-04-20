@@ -40,7 +40,7 @@ class TweetDollarCotation extends Command
             'tweets',
             [
                 Client::KEY_REQUEST_FORMAT => Client::REQUEST_FORMAT_JSON,
-                'text' => "Cotação de Hoje: {$dateTime}\n\n1.00 Dólar está igual a {$value} reais."
+                'text' => "Cotação de: {$dateTime}\n\n1.00 Dólar está igual a {$value} reais."
             ]
         );
     }
