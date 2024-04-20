@@ -19,5 +19,5 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withSchedule(function (Schedule $schedule) {
-        $schedule->command(TweetDollarCotation::class)->cron('0 8-17 * * 1-5');
+        $schedule->command(TweetDollarCotation::class)->cron('0 8-18 * * 1-5');
     })->create();
