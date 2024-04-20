@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Services\Entities\Cotation;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 
@@ -23,7 +24,7 @@ class AwesomeApiService
     public function last(string $currency)
     {
         try {
-            return collect($this->api->get("/last/{$currency}")->json())->toArray();
+            return new Cotation(collect($this->api->get("/last/{$currency}")->json())->toArray());
         } catch (\Exception $e) {
             throw $e;
         }
